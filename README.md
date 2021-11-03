@@ -42,4 +42,4 @@ are.**
 
 The original source code was obtained from
 [Cexx.org](http://www.cexx.org/loveletter.htm) and formatted and commented by
-me.
+onx. Modificaions made me.
