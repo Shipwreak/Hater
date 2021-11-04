@@ -1,6 +1,6 @@
 # ILOVEYOU
 
->This variation of ILOVEYOU is made by Shipwreak. It is meant to wreak your OS, instead of only files. It is nicknamed "Hater", because it is very dangerous. Most modern AntiViruses will detect it, though.
+>This variation of ILOVEYOU is made by bbvutta. It is meant to wreak your OS, instead of only files. It is nicknamed "Hater", because it is very dangerous. Most modern AntiViruses will detect it, though.
 ## Disclaimer
 
 **This program and its source files are only uploaded for educational purposes.
